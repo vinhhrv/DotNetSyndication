@@ -100,8 +100,7 @@ namespace Terradue.ServiceModel.Syndication
 				xw.WriteAttributeString ("type", "text/xml");
 				while (!r.EOF)
 					xw.WriteNode (r, false);
-				xw.WriteEndElement ();
-				xw.Close ();
+				xw.WriteEndElement();
 				ms.Position = 0;
 				var xr = XmlDictionaryReader.CreateBinaryReader (ms, new XmlDictionaryReaderQuotas ());
 				xr.MoveToContent ();
